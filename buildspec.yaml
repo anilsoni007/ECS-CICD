@@ -22,6 +22,6 @@ version: 0.2
           - echo Pushing the Docker images...
           - docker push $REPOSITORY_URI:$IMAGE_TAG
           - echo Writing image definitions file...
-          - printf '[{"name":"app1-cicd","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+          - printf '[{"name":"app1-cicd","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json  #task defi container name: app1-cicd
     artifacts:
         files: imagedefinitions.json
